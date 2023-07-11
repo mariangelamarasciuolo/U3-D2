@@ -100,11 +100,11 @@
       */
 
     const changePcontent = function () {
-      const pArray = document.querySelectorAll("p");
-      const phrases = ["lorem ipsum1","lorem ipsum2"]
-      for (let i = 0; i < pArray.length; i++) {
-      const p = pArray[i];
-      p.innerText = phrases[i]
+      const pArray = document.querySelectorAll("p"); //accedo a tutti gli elementi p
+      const phrases = ["lorem ipsum1","lorem ipsum2"] // mi creo un array che contenga le stringhe
+      for (let i = 0; i < pArray.length; i++) { //creo un cilo for per iterare attraverso gli elementi `p`
+      const p = pArray[i]; //assegno l'elemento `i` a `p`
+      p.innerText = phrases[i] // e gli indico il testo
     }
       
     }
@@ -130,18 +130,24 @@
     */
 
     const addToTheSecond = function () {
-      
-
+      const lista2 = document.getElementById("secondList") //accedo alla lista
+      const newElementList = document.createElement("li") //mi creo un nuovo elemento
+      newElementList.innerText = "4th" // gli do del testo
+      lista2.appendChild(newElementList) //lo appendo alla lista dove ho accesso
     }
+    addToTheSecond()
 
     /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
     */
 
     const addParagraph = function () {
-
-
+    const addP2 = document.querySelector("div p") 
+    const newP = document.createElement("p")
+    newP.innerText = "secondo paragrafo"
+    addP2.appendChild(newP)
     }
+    addParagraph()
 
     /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
