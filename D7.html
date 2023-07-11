@@ -100,8 +100,13 @@
       */
 
     const changePcontent = function () {
-      const changep = document.querySelectorAll("div p")
-      changep.innerText = "cambio il paragrafo"
+      const pArray = document.querySelectorAll("p");
+      const phrases = ["lorem ipsum1","lorem ipsum2"]
+      for (let i = 0; i < pArray.length; i++) {
+      const p = pArray[i];
+      p.innerText = phrases[i]
+    }
+      
     }
     changePcontent()
 
@@ -110,15 +115,22 @@
       */
 
     const changeUrls = function () {
-
+    const allTheAs = document.querySelectorAll("a:not(footer a)");
+    console.log(allTheAs)
+    for (let i = 0; i < allTheAs.length; i++) {
+      const a = allTheAs[i];
+      a.setAttribute("href","https://www.google.com")
     }
+   
+    }
+    changeUrls()
 
     /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
     const addToTheSecond = function () {
-
+      
 
     }
 
